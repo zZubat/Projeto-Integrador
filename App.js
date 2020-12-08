@@ -6,7 +6,7 @@ import {Header} from 'react-native-elements';
 const dados = [
   {
     key: 1,
-    foto: "",
+    img: "https://img.ibxk.com.br/2019/02/17/17124052466014.jpg?w=328",
     nome: "Rogério lima",
     profissao: "pintor",
     telefone:"(16) 997483162",
@@ -14,7 +14,7 @@ const dados = [
   },
   {
     key: 2,
-    foto: "",
+    img: "",
     nome: "Claudio pereira",
     profissao: "encanador",
     telefone:"(16) 996487234",
@@ -22,7 +22,7 @@ const dados = [
   },
   {
     key: 3,
-    foto: "",
+    img: "",
     nome: "Thalles alcantra",
     profissao: "eletricista",
     telefone:"(16) 999753185",
@@ -30,7 +30,7 @@ const dados = [
   },
   {
     key: 4,
-    foto: "",
+    img: "",
     nome: "José almeida",
     profissao: "pedreiro",
     telefone:"(16) 995784634",
@@ -38,7 +38,7 @@ const dados = [
   },
   {
     key: 5,
-    foto: "",
+    img: "",
     nome: "Lucas miranda",
     profissao: "marceneiro",
     telefone:"(16) 993215646",
@@ -60,7 +60,7 @@ const App = () => {
         keyExtractor={(item)=> item.key.toString()}
         renderItem={ ({item}) => 
           <TouchableOpacity>
-            <Linha nome={item.nome} profissao={item.profissao} telefone={item.telefone} avaliacao={item.avaliacao} />
+            <Linha img={item.img} nome={item.nome} profissao={item.profissao} telefone={item.telefone} avaliacao={item.avaliacao} />
           </TouchableOpacity>
       }
       />
