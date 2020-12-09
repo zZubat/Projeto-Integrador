@@ -5,3 +5,22 @@
 - caso o usuario queria contratar algum profissional, ele podera entrar em contato via WhatsApp
 
 - depois que o usuario contratou algum profissional ele tambem podera avaliar o serviço pretado 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- Para iniciar o projeto no expo é necessário rodar os seguintes comandos:
+    - "npm install expo-cli --global"
+    - "npm install"

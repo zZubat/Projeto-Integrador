@@ -4,10 +4,9 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 const Linha = (props) => {
     return( 
         <View style={styles.container}>
-            <Image
-                source={{uri: props.foto}}
-                style={{width: 40, height: 40}}
-            />
+            <View style={styles.left}>
+                <Image source={{uri: props.img}} style={styles.image}/>
+            </View>
             <Text style={styles.nome}>
                 {props.nome}
             </Text>
@@ -27,6 +26,10 @@ const styles = StyleSheet.create({
     container: {
         marginTop: 45,
         marginHorizontal: 10,
+    },
+    image:{
+        width:85,
+        height:70
     },
     nome: {
         fontSize:16,
