@@ -1,9 +1,13 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 
 const Linha = (props) => {
     return( 
         <View style={styles.container}>
+            <Image
+                source={{uri: props.foto}}
+                style={{width: 40, height: 40}}
+            />
             <Text style={styles.nome}>
                 {props.nome}
             </Text>
@@ -22,7 +26,7 @@ const Linha = (props) => {
 const styles = StyleSheet.create({
     container: {
         marginTop: 45,
-        marginHorizontal: 10
+        marginHorizontal: 10,
     },
     nome: {
         fontSize:16,

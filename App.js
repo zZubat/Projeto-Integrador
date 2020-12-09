@@ -1,52 +1,22 @@
-import React from 'react';
-import { StyleSheet, FlatList, TouchableOpacity, View} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, FlatList, TouchableOpacity, View, Text} from 'react-native';
 import Linha from './components/Linha';
 import {Header} from 'react-native-elements';
-
-const dados = [
-  {
-    key: 1,
-    foto: "",
-    nome: "Rogério lima",
-    profissao: "pintor",
-    telefone:"(16) 997483162",
-    avaliacao:"5",
-  },
-  {
-    key: 2,
-    foto: "",
-    nome: "Claudio pereira",
-    profissao: "encanador",
-    telefone:"(16) 996487234",
-    avaliacao:"4,8",
-  },
-  {
-    key: 3,
-    foto: "",
-    nome: "Thalles alcantra",
-    profissao: "eletricista",
-    telefone:"(16) 999753185",
-    avaliacao:"4,6",
-  },
-  {
-    key: 4,
-    foto: "",
-    nome: "José almeida",
-    profissao: "pedreiro",
-    telefone:"(16) 995784634",
-    avaliacao:"4,5",
-  },
-  {
-    key: 5,
-    foto: "",
-    nome: "Lucas miranda",
-    profissao: "marceneiro",
-    telefone:"(16) 993215646",
-    avaliacao:"4,1",
-  },
-]
+import api from './api';
 
 const App = () => {
+  const [profissionais, setProfissionais] = useState([]);
+
+  useEffect(() => {
+    carregaProfissionais();
+  }, []);
+
+  async function carregaProfissionais(){
+    setProfissionais([]);
+    const response = await api.get('/db');
+    setProfissionais(response['data'].dados);
+}
+
   return( 
 
     <View>
@@ -55,12 +25,13 @@ const App = () => {
           leftComponent={{ icon: 'menu', color: '#fff' }}
           rightComponent={{ icon: 'home', color: '#fff' }}
       />
+      <Text>Profissionais</Text>
       <FlatList
-        data={dados}
+        data={profissionais}
         keyExtractor={(item)=> item.key.toString()}
         renderItem={ ({item}) => 
           <TouchableOpacity>
-            <Linha nome={item.nome} profissao={item.profissao} telefone={item.telefone} avaliacao={item.avaliacao} />
+            <Linha nome={item.nome} foto={item.foto} profissao={item.profissao} telefone={item.telefone} avaliacao={item.avaliacao} />
           </TouchableOpacity>
       }
       />
