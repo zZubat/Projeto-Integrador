@@ -30,7 +30,7 @@ const App = () => {
         keyExtractor={(item)=> item.key.toString()}
         renderItem={ ({item}) => 
           <TouchableOpacity>
-            <Linha nome={item.nome} foto={item.foto} profissao={item.profissao} telefone={item.telefone} avaliacao={item.avaliacao} />
+            <Linha nome={item.nome} foto={item.img} profissao={item.profissao} telefone={item.telefone} avaliacao={item.avaliacao} />
           </TouchableOpacity>
       }
       />

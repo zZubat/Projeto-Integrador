@@ -5,7 +5,10 @@ const Linha = (props) => {
     return( 
         <View style={styles.container}>
             <View style={styles.left}>
-                <Image source={{uri: `https://raw.githubusercontent.com/michelzenatti/prestacaodeservico/master/.github/images/${props.foto}`}} style={styles.foto}/>
+                <Image
+                    source={{uri: `https://raw.githubusercontent.com/michelzenatti/prestacaodeservico/master/.github/images/${props.foto}`}}
+                    style={{height: 100, width: 100}}
+                />
             </View>
             <Text style={styles.nome}>
                 {props.nome}

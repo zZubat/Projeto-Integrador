@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 42084,
-  "expoServerNgrokUrl": "https://d7-emq.anonymous.projeto-integrador.exp.direct",
-  "packagerNgrokUrl": "https://packager.d7-emq.anonymous.projeto-integrador.exp.direct",
-  "ngrokPid": 75988,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }
