@@ -25,7 +25,6 @@ const App = () => {
           leftComponent={{ icon: 'menu', color: '#fff' }}
           rightComponent={{ icon: 'home', color: '#fff' }}
       />
-      <Text>Profissionais</Text>
       <FlatList
         data={profissionais}
         keyExtractor={(item)=> item.key.toString()}

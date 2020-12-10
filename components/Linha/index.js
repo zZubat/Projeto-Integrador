@@ -5,7 +5,7 @@ const Linha = (props) => {
     return( 
         <View style={styles.container}>
             <View style={styles.left}>
-                <Image source={{uri: props.img}} style={styles.image}/>
+                <Image source={{uri: `https://raw.githubusercontent.com/michelzenatti/prestacaodeservico/master/.github/images/${props.foto}`}} style={styles.foto}/>
             </View>
             <Text style={styles.nome}>
                 {props.nome}
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         marginTop: 45,
         marginHorizontal: 10,
     },
-    image:{
+    foto:{
         width:85,
         height:70
     },
