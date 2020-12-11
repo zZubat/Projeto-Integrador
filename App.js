@@ -22,7 +22,7 @@ const App = () => {
     <View style={styles.container}>
       <Header
           backgroundColor= '#000'
-          leftComponent={{ icon: 'menu', color: '#fff' }}
+          centerComponent={{ icon: 'menu', color: '#fff' }}
           rightComponent={{ icon: 'home', color: '#fff' }}
       />
       <FlatList

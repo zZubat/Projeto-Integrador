@@ -58,10 +58,12 @@ const styles = StyleSheet.create({
     footer: {
         flexDirection: "row",
         justifyContent:"space-between",
+        paddingLeft:10 ,
+        paddingRight:8 , 
     },
     profissao: {
-        fontSize:50,
-        color: "#999",
+       
+        color: "#999"
     },
     telefone: {
         flexDirection: 'column',
