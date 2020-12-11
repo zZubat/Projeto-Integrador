@@ -19,7 +19,7 @@ const App = () => {
 
   return( 
 
-    <View>
+    <View style={styles.container}>
       <Header
           backgroundColor= '#000'
           leftComponent={{ icon: 'menu', color: '#fff' }}
@@ -42,8 +42,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
     fontFamily: 'arial',
   },
 });

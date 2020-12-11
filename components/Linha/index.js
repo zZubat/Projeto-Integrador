@@ -17,6 +17,9 @@ const Linha = (props) => {
                 <Text>
                     {props.profissao}
                 </Text>
+                <Text>
+                    {props.telefone}
+                </Text>
                 <Text style={styles.avaliacao}>
                     {props.avaliacao}
                 </Text>
@@ -29,22 +32,40 @@ const styles = StyleSheet.create({
     container: {
         marginTop: 45,
         marginHorizontal: 10,
+        borderRadius:10,
+        shadowColor:"#000",
+        shadowOffset:{
+            width:0,
+            height:-5
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: 20,
+        elevation: 5,
+        backgroundColor:"#fff",
+        marginHorizontal:10,
+        overflow: "hidden"
     },
     foto:{
         width:85,
         height:70
     },
     nome: {
-        fontSize:16,
+        fontSize:18,
         fontWeight:"bold",
         color:"#494949",
+        
     },
     footer: {
         flexDirection: "row",
         justifyContent:"space-between",
     },
     profissao: {
-        color: "#999"
+        fontSize:50,
+        color: "#999",
+    },
+    telefone: {
+        flexDirection: 'column',
+        color: "#37eb34"
     },
     avaliacao: {
         color: "#37eb34"
